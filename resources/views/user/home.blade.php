@@ -9,17 +9,10 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Sixteen Clothing HTML Template</title>
+    <title>Hoolka-Hall Hiring Made Easy</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<!--
-
-TemplateMo 546 Sixteen Clothing
-
-https://templatemo.com/tm-546-sixteen-clothing
-
--->
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -44,7 +37,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Sixteen <em>Clothing</em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2>Hoolka <em>Clothing</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -64,6 +57,22 @@ https://templatemo.com/tm-546-sixteen-clothing
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
+              <li>
+              @if (Route::has('login'))
+               
+                    @auth
+
+             <x-app-layout></x-app-layout>
+                    @else
+                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}" >Log in</a></li>
+
+                        @if (Route::has('register'))
+                        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+                        @endif
+                    @endauth
+    
+            @endif
+</li>
             </ul>
           </div>
         </div>
