@@ -1,18 +1,78 @@
 <x-app-layout>
+    <x-slot name="header">
+        <h2 class="h4 font-weight-bold">
+            Add Hall
+        </h2>
+    </x-slot>
 
+    <div class="container-fluid page-body-wrapper">
+        @include('admin.sidebar')
+
+        <div class="main-content">
+            <div class="container">
+                <h1 class="title">Add Hall</h1>
+
+                @if(session()->has('message'))
+                <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+
+                {{session()->get('message')}}
+</div>
+
+                @endif
+
+                <form action="{{ url('uploadhalls') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+
+                    <div class="form-group">
+                        <label for="title">Hall Title</label>
+                        <input style="color:white" type="text" name="title" id="title" class="form-control" placeholder="Enter title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input style="color:white" type="number" name="price" id="price" class="form-control" placeholder="Enter PricePerDay" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input style="color:white" type="text" name="description" id="description" class="form-control" placeholder="Enter Description" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file">File</label>
+                        <input type="file" name="file" id="file" class="form-control-file">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+  @include('admin.navbar')
 </x-app-layout>
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-   @include('admin.css')
-  </head>
-  <body>
+<head>
+    @include('admin.css')
 
-  @include('admin.sidebar')
-   @include('admin.navbar')
-   <!-- partial -->
-<div class="container-fluid page-body-wrapper'>
- <h1 style="color:white";>this is a Hall</hi>
+    <style type="text/css">
+        .title {
+            color: white;
+            padding-top: 25px;
+            font-size: 25px;
+        }
+        .text-white {
+        color: white;
+        }
+
+    </style>
+</head>
+<body>
 
 
     <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
