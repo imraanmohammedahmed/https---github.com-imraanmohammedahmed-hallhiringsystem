@@ -1,9 +1,4 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="h4 font-weight-bold">
-            Add Hall
-        </h2>
-    </x-slot>
 
     <div class="container-fluid page-body-wrapper">
         @include('admin.sidebar')

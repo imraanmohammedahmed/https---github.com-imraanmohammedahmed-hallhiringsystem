@@ -34,11 +34,12 @@ public function uploadhalls(Request $request)
     }
 
 
-    public function showhalls()
+    public function allhalls()
 
-    {
-        return view('admin.showhalls');
-    
-    }
+{
+    return view('admin.allhalls');
+
+}
+
 }
 
