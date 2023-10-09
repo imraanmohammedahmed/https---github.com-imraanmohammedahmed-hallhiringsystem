@@ -10,7 +10,7 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="assets/images/team_01.jpg" alt="">
+                  <img class="img-xs rounded-circle " src="" alt="">
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
@@ -64,13 +64,14 @@
               </span>
               <span class="menu-title">Add new Halls</span>
             </a>
+
           </li>
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{url('allhalls')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-file-document-box"></i>
               </span>
-              <span class="menu-title">All Halls</span>
+              <span class="menu-title">Show All Halls</span>
             </a>
           </li>
         </ul>

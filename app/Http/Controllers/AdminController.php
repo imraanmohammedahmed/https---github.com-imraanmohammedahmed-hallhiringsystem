@@ -37,7 +37,9 @@ public function uploadhalls(Request $request)
     public function allhalls()
 
 {
-    return view('admin.allhalls');
+    $data=halls::all();
+    
+    return view('admin.allhalls',compact('data'));
 
 }
 

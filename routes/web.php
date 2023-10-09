@@ -29,4 +29,5 @@ route::get('/redirect',[HomeController::class,'redirect']);
 route::get('/',[HomeController::class,'index']);
 route::get('/halls',[AdminController::class,'halls']);
 route::post('/uploadhalls',[AdminController::class,'uploadhalls']);
-route::post('/allhalls',[AdminController::class,'allhalls']);
+
+route::get('/allhalls',[AdminController::class,'allhalls']);
