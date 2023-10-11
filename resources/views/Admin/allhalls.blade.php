@@ -19,8 +19,9 @@
                             <td>{{$halls->description}}</td>
                             <td>{{$halls->price}}$</td>
                             <td><img width="100px" height="100px" src="/hallimage/{{$halls->image}}"></td>
-                            <td>a</td>
-                            <td>{{$halls->price}}$</td>
+                            <td><a class="btn btn-primary href="">Update</td>
+                            <td><a class="btn btn-danger href="{{url('deletehall',$halls->id)}}">Delete</td>
+                            
                         </tr>
                         @endforeach
                     </table>

@@ -42,6 +42,14 @@ public function uploadhalls(Request $request)
     return view('admin.allhalls',compact('data'));
 
 }
+public function deletehall($id)
+
+{
+    $data=halls::find($id);
+    $data->delete();
+
+    return redirect()->back();
+}
 
 }
 

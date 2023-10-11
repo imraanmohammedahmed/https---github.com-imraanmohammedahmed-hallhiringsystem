@@ -31,3 +31,4 @@ route::get('/halls',[AdminController::class,'halls']);
 route::post('/uploadhalls',[AdminController::class,'uploadhalls']);
 
 route::get('/allhalls',[AdminController::class,'allhalls']);
+route::get('/deletehall/{id}',[AdminController::class,'deletehall']);
